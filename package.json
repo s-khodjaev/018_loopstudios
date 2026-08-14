@@ -1,7 +1,7 @@
 {
   "scripts": {
     "build": "tailwindcss -i input.css -o css/main.css",
-    "watch": "tailwindcss -u inputs.css -o css/main.css --watch"
+    "watch": "tailwindcss -i input.css -o css/main.css --watch"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.3.3",
