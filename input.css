@@ -11,3 +11,17 @@
   --font-sans: "Josefin Sans", sans-serif;
   --font-alata: "Alata", sans-serif;
 }
+
+#hero {
+  background-image: url("../img/desktop/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 576px) {
+  #hero {
+    background-image: url("../img/mobile/image-hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
