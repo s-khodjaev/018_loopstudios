@@ -186,6 +186,9 @@
   .top-48 {
     top: calc(var(--spacing) * 48);
   }
+  .z-40 {
+    z-index: 40;
+  }
   .container {
     width: 100%;
     @media (width >= 480px) {
@@ -230,6 +233,9 @@
   }
   .mb-32 {
     margin-bottom: calc(var(--spacing) * 32);
+  }
+  .block {
+    display: block;
   }
   .flex {
     display: flex;
@@ -368,6 +374,10 @@
     .group-hover\:border-blue-50:is(:where(.group):hover *) {
       border-color: var(--color-blue-50);
     }
+  }
+  .focus\:outline-none:focus {
+    --tw-outline-style: none;
+    outline-style: none;
   }
   @media (width >= 768px) {
     .md\:absolute {
@@ -591,6 +601,41 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+}
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+.hamburger-top, .hamburger-middle, .hamburger-bottom {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+.hamburger-middle {
+  transform: translateY(7px);
+}
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+.open {
+  transform: rotate(90deg);
+}
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+.open .hamburger-middle {
+  display: none;
+}
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }
 @property --tw-space-y-reverse {
   syntax: "*";
